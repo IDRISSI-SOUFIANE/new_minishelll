@@ -6,7 +6,7 @@
 /*   By: sidrissi <sidrissi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 21:22:56 by sidrissi          #+#    #+#             */
-/*   Updated: 2025/03/11 02:41:25 by sidrissi         ###   ########.fr       */
+/*   Updated: 2025/03/13 06:21:08 by sidrissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <fcntl.h>
 # include <readline/readline.h>
 # include <readline/history.h>
 
@@ -32,6 +33,11 @@ typedef enum s_keyword
 	PIPES,
 	WORD,
 	START,
+	FREAD_IN,
+	FWRITE_OUT,
+	F_HERDOC,
+	F_APPEND,
+	CMD,
 }  t_keyword;
 
 typedef struct s_token
@@ -84,6 +90,11 @@ int		error1(t_token *tokens);
 /*---------------expand---------------*/
 void	expand(t_token *tokens);
 
+/*---------------ft_rename------------*/
+void	ft_rename(t_token *tokens);
+
+/*-------------ft_herdoc--------------*/
+void	ft_herdoc(t_token *tokens);
 
 /*===============libft===============*/
 char	*ft_substr(char *s, int start, int len);
@@ -102,7 +113,7 @@ int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 void	*ft_memset(void *b, int c, size_t len);
-
+int		ft_strcmp(char *s1, char *s2);
 
 
 

@@ -6,11 +6,18 @@
 /*   By: sidrissi <sidrissi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 20:50:45 by sidrissi          #+#    #+#             */
-/*   Updated: 2025/03/06 00:51:46 by sidrissi         ###   ########.fr       */
+/*   Updated: 2025/03/12 21:56:02 by sidrissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/minishell.h"
+
+
+/*
+
+ls >| a should handle this
+
+*/
 
 int	is_redirect(t_keyword type)
 {
@@ -85,5 +92,5 @@ int	error1(t_token *tokens)
 	}
 	if (prev && (is_redirect(prev->type) || is_pipe(prev->type)))
 	return (ft_putstr_fd(ERROR, STDERR_FILENO), 1);
-	return 0;
+	return (0);
 }                 

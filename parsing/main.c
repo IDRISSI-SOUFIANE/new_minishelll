@@ -6,7 +6,7 @@
 /*   By: sidrissi <sidrissi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:15:46 by sidrissi          #+#    #+#             */
-/*   Updated: 2025/03/11 01:59:23 by sidrissi         ###   ########.fr       */
+/*   Updated: 2025/03/13 22:07:31 by sidrissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,25 +59,23 @@ int	lexing(char *line)
 	}
 
 	expand(tokens);
-	// expand_1(tokens);
-	/**/
 
-	t_token *temp;
+	ft_rename(tokens);
 
-	temp = tokens;
-	while (temp)
-	{
-		printf("%s \n", temp->value);
-		temp = temp->next;
-	}
+	ft_herdoc(tokens);
+
+	// t_token *temp;
+
+	// temp = tokens;
+	// while (temp)
+	// {
+	// 	printf("value: %s\t type: %d \n", temp->value, temp->type);
+	// 	temp = temp->next;
+	// }
 	free_tokens(tokens);
 	return (0);
 }
 
-void	f()
-{
-	system("leaks minishell");
-}
 
 int main(int ac , char **av, char **env)
 {
