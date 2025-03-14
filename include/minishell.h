@@ -6,7 +6,7 @@
 /*   By: sidrissi <sidrissi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 21:22:56 by sidrissi          #+#    #+#             */
-/*   Updated: 2025/03/13 06:21:08 by sidrissi         ###   ########.fr       */
+/*   Updated: 2025/03/14 01:43:54 by sidrissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <readline/history.h>
 
 # define ERROR "minishell: syntax error near unexpected token\n"
+# define name_length 9
 
 typedef enum s_keyword
 {
