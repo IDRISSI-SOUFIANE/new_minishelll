@@ -6,7 +6,7 @@
 /*   By: sidrissi <sidrissi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 21:22:56 by sidrissi          #+#    #+#             */
-/*   Updated: 2025/03/14 01:43:54 by sidrissi         ###   ########.fr       */
+/*   Updated: 2025/03/15 03:07:59 by sidrissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void	expand(t_token *tokens);
 void	ft_rename(t_token *tokens);
 
 /*-------------ft_herdoc--------------*/
-void	ft_herdoc(t_token *tokens);
+void	ft_herdoc(t_token **tokens);
 
 /*===============libft===============*/
 char	*ft_substr(char *s, int start, int len);

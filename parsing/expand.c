@@ -52,7 +52,7 @@ static void handle_odd_dollars(t_expand *ex, char *str)
 	if (ft_isalnum(str[ex->i]) || str[ex->i] == '_') // || ?
 	{
 		extract_var(ex, str);
-		val = getenv(ex->var_name);
+		val = getenv(ex->var_name); // if I remove the export should check if THERE is NO EXPORT TO PREVENT THE SEGV
 		if (!val)
 			val = "";
 		new_res = ft_strjoin(ex->res, val);
